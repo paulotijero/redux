@@ -1,7 +1,11 @@
 /** @jsx jsx */
 import React from "react";
 import { render } from "react-dom";
+import { Router } from "@reach/router";
 import { jsx, Global } from "@emotion/core";
+
+import Products from "./views/products";
+import Product from "./views/product";
 
 const global = {
   body: {
@@ -17,6 +21,10 @@ function App() {
   return (
     <>
       <Global styles={global} />
+      <Router>
+        <Products path="/" />
+        <Product path="products/:id" />
+      </Router>
     </>
   );
 }
