@@ -1,4 +1,3 @@
-// src/reducer.js
 const initialState = {
   products: {
     1: {

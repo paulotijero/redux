@@ -1,15 +1,15 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import React from "react";
-import { useCartProducts, useGetTotal } from "../selectors";
+import { useCartProducts, useTotal } from "../selectors";
 
 function Cart() {
   const products = useCartProducts();
-  const total = useGetTotal();
+  const total = useTotal();
 
   return (
     <>
-      <table css={{ width: "100%", textAlign: "center" }}>
+      <table>
         <thead>
           <tr>
             <th>Name</th>
